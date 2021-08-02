@@ -24,20 +24,20 @@ public class NumerosRomanos {
         return resultado;
     }
 
-    private String generico(int decena, int x, int y, int z) {
+    private String generico(int num, int x, int y, int z) {
 
-        switch (decena) {
+        switch (num) {
             case 4:
                 return simbolosRomanos.get(x) + simbolosRomanos.get(y);
             case 9:
                 return simbolosRomanos.get(x) + simbolosRomanos.get(z);
         }
 
-        if (decena <= 3)
-            return sumar(1, decena, "", simbolosRomanos.get(x));
+        if (num <= 3)
+            return sumar(1, num, "", simbolosRomanos.get(x));
 
-        if (decena <= 8)
-            return sumar(6, decena, simbolosRomanos.get(y), simbolosRomanos.get(x));
+        if (num <= 8)
+            return sumar(6, num, simbolosRomanos.get(y), simbolosRomanos.get(x));
 
         return null;
     }
